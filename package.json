@@ -11,7 +11,9 @@
   },
   "author": "Diego Laucsen",
   "files": [
-    "dist"
+    "dist",
+    "lib",
+    "gulpfile.js"
   ],
   "main": "dist/index.js",
   "license": "MIT",
