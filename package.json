@@ -1,6 +1,6 @@
 {
   "name": "dynamito",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Connect into your DynamoDb with epic weapons.",
   "directories": {
     "test": "test"
@@ -11,9 +11,7 @@
   },
   "author": "Diego Laucsen",
   "files": [
-    "dist",
-    "lib",
-    "gulpfile.js"
+    "dist"
   ],
   "main": "dist/index.js",
   "license": "MIT",
