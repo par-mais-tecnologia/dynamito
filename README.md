@@ -260,3 +260,8 @@ On this case, when `person.full` is accessed, `Jon Snow`will be returned.
 ### Query Population
 
 TODO
+
+
+# TODOS
+
+1. Remvoe winston from core library.

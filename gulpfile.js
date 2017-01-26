@@ -51,19 +51,17 @@ gulp.task('test', ['pre-test'], function (cb) {
         './confs/dynamoDB.conf.js',
         './confs/winston.conf.js'
       ],
-      timeout: 5000
+      timeout: 2000
     }))
     .on('error', function (err) {
       mochaErr = err;
       cb(mochaErr);
     })
-    // .pipe(istanbul.writeReports())
+    .pipe(istanbul.writeReports())
     .on('end', function () {
       cb(mochaErr);
     });
 });
 
-// gulp.task('prepublish', ['nsp', 'babel']);
 gulp.task('prepublish', ['nsp']);
-// gulp.task('default', ['static', 'test', 'coveralls']);
 gulp.task('default', ['static', 'test']);
