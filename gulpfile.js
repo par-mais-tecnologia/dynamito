@@ -7,6 +7,8 @@ var plumber = require('gulp-plumber');
 var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var isparta = require('isparta');
+var del = require('del');
+var babel = require('gulp-babel');
 
 // Initialize the babel transpiler so ES2015 files gets compiled
 // when they're loaded
@@ -63,5 +65,15 @@ gulp.task('test', ['pre-test'], function (cb) {
     });
 });
 
-gulp.task('prepublish', ['nsp']);
+gulp.task('clean', function () {
+  return del('dist');
+});
+
+gulp.task('babel', ['clean'], function () {
+  return gulp.src('lib/**/*.js')
+    .pipe(babel())
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('prepublish', ['nsp', 'babel']);
 gulp.task('default', ['static', 'test']);
