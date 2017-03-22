@@ -7,6 +7,3 @@ node_modules
 coverage
 
 npm-debug.log
-
-# External Libs
-dynamito-memory/

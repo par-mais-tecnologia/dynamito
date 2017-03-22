@@ -78,15 +78,9 @@ CommonDocument.prototype._applyConfigs = function (input) {
         input[key] = cPath.default;
       }
 
-      // Adaptable Format: (String -> Number, String => Boolean)
+      // Adaptable Format: (String -> Number, string => Boolean)
       if (typeof input[key] === 'string') {
-        // HERE!
         input[key] = cPath.meta.parse(input[key]);
-
-        // DynamoDb does not accept empty strings. It must be undefined on this case.
-        if (input[key] === '') {
-          delete input[key];
-        }
       }
     }
   }

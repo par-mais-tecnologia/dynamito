@@ -15,6 +15,26 @@ describe('Dynamito Custom Validations: ', () => {
   });
 
   describe('Native DynamoDB Validations', () => {
+    it('should not save empty strings', done => {
+      var input = {
+        email: 'some.email@target.com',
+        name: 'Derpy',
+        last: '',
+        age: 32
+      };
+
+      PersonModel
+        .create(input)
+        .then(() => {
+          // Dont want to fall here.
+          expect(false).to.be.equal(true);
+        })
+        .catch(err => {
+          expect(err).to.be.equal('Attributes may not contain an empty string: last');
+          done();
+        });
+    });
+
     it('should not save with HASH key undefined', done => {
       var input = {
         email: undefined,
