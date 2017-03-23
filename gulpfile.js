@@ -15,12 +15,18 @@ var babel = require('gulp-babel');
 require('babel-core/register');
 
 gulp.task('static', function () {
-  return gulp.src('lib/**/*.js')
+  return gulp.src([
+    'lib/**/*.js',
+    'test/**/*.js'
+  ])
     .pipe(excludeGitignore())
     .pipe(eslint({
       globals: {
         expect: true,
         sinon: true
+      },
+      rules: {
+        'eol-last': 2
       }
     }))
     .pipe(eslint.format())
