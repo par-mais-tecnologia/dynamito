@@ -1,5 +1,5 @@
-import Dynamito from '../lib';
-import PersonSchema from './mocks/person.model.mock.js';
+import Dynamito from '../../lib';
+import PersonSchema from '../mocks/person.model.mock.js';
 
 var PersonModel;
 
@@ -19,7 +19,7 @@ function genSample() {
   return sample;
 }
 
-describe('Dynamito Hooks: ', () => {
+describe('Dynamito Hooks: #save ', () => {
   before(() => {
     PersonModel = Dynamito.model('Person', PersonSchema);
     return PersonModel.scan().removeAll();
