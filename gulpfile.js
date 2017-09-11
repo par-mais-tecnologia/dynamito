@@ -17,7 +17,7 @@ require('babel-core/register');
 gulp.task('static', function () {
   return gulp.src([
     'lib/**/*.js',
-    'test/**/*.js'
+    '!test/**/*.js',
   ])
     .pipe(excludeGitignore())
     .pipe(eslint({
@@ -65,9 +65,15 @@ gulp.task('test', ['pre-test'], function (cb) {
       mochaErr = err;
       cb(mochaErr);
     })
-    // .pipe(istanbul.writeReports())
+    .pipe(istanbul.writeReports())
+    .pipe(istanbul.enforceThresholds({
+      thresholds: {
+        global: 70
+      }
+    })) // Enforce a coverage of at least 80%
     .on('end', function () {
       cb(mochaErr);
+      process.exit();
     });
 });
 
