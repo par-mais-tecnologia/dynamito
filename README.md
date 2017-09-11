@@ -1,18 +1,24 @@
+![Logo][]
+
+> Easily binding your Node application to AWS DynamoDb. 
+
 # Dynamito
 
-Easily binding your Node application to AWS DynamoDb.
+- __Lead Maintainer:__ [Diego Laucsen][Lead]
+- __Sponsor:__ [Par Mais][Sponsor]
+- __Node:__ 6.x
 
 ## Motivation
 
 You may ask: 'Why another DynamoDb Connector?'
 
-The proposal of this tool is to replace Mongoose from applications that use it, when you want to change from MongoDb to DynamoDb. Basically, this one has been developed to replace Mongoose on Yeoman Angular-Fullstack Generator, with all basic features used on that generator.
+The proposal of this tool is to be Mongoose like, despite of Dynamo differences.
 
 Reference: [Mongodb](https://github.com/Automattic/mongoose)
 
 ### Future of this Library
 
-There are many features that is not developed yet and can be developed to increate this library power, like new hooks and operations. The main gloal is that the methods and classes my be like Mongoose methods and classes.
+There are many features that is not developed yet and can be developed to increase this library power, like new hooks and operations. The main gloal is that the methods and classes my be like Mongoose methods and classes.
 
 This library will be perfect when you change your importation from your project from Mongoose to Dynamito and it still working.
 
@@ -30,6 +36,7 @@ This library act on this principles:
 ### TODO's
 
 1. Test Db Operations.
+2. Removoe winston from core library.
 
 ## Installation
 
@@ -261,7 +268,21 @@ On this case, when `person.full` is accessed, `Jon Snow`will be returned.
 
 TODO
 
+## Contributing
+The [Par Mais Tecnologia][ParMaisTech] encourages participation. If you feel you can help in any way, be
+it with bug reporting, documentation, examples, extra testing, or new features feel free
+to [create an issue][Issue], or better yet, [submit a [Pull Request][Pull]. For more
+information on contribution please see our [Contributing][Contrib] guide.
 
-# TODOS
+## License
+Copyright (c) 2017 Par 6 Tecnologia LTDA;
+Licensed under __[Apache 2.0][Lic]__.
 
-1. Remvoe winston from core library.
+[Lead]: https://github.com/Laucsen
+[Lic]: ./LICENSE
+[Logo]: ./par-mais-rect.png
+[Sponsor]: http://parmais.com.br
+[ParMaisTech]: http://parmais.com.br
+[Contrib]: ./CONTRIBUTE
+[Issue]: https://github.com/par-mais-tecnologia/dynamito/issues/new
+[Pull]: https://github.com/par-mais-tecnologia/dynamito/pulls
