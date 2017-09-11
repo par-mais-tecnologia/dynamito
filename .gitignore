@@ -3,8 +3,8 @@
 
 # Project
 node_modules
-# dist
 coverage
+dist/
 
 npm-debug.log
 
