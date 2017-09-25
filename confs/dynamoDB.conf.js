@@ -1,6 +1,6 @@
 import Dynamito from '../lib';
 
-import DynamitoMemory from '../../dynamito-memory';
+import DynamitoMemory from 'dynamito-memory';
 
 // Initialize Database
 Dynamito.configure({
