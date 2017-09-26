@@ -20,15 +20,7 @@ gulp.task('static', function () {
     '!test/**/*.js',
   ])
     .pipe(excludeGitignore())
-    .pipe(eslint({
-      globals: {
-        expect: true,
-        sinon: true
-      },
-      rules: {
-        'eol-last': 2
-      }
-    }))
+    .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
@@ -65,12 +57,12 @@ gulp.task('test', ['pre-test'], function (cb) {
       mochaErr = err;
       cb(mochaErr);
     })
-    // .pipe(istanbul.writeReports())
-    // .pipe(istanbul.enforceThresholds({
-    //   thresholds: {
-    //     global: 70
-    //   }
-    // })) // Enforce a coverage of at least 80%
+    .pipe(istanbul.writeReports())
+    .pipe(istanbul.enforceThresholds({
+      thresholds: {
+        global: 70
+      }
+    })) // Enforce a coverage of at least 80%
     .on('end', function () {
       cb(mochaErr);
       process.exit();

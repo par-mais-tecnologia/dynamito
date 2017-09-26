@@ -1,0 +1,20 @@
+{
+  "globals": {
+    "require": true,
+    "process": true,
+    "__dirname": true,
+    "setImmediate": true,
+    "describe": true,
+    "it": true,
+    "sinon": true,
+    "before": true,
+    "beforeEach": true,
+    "expect": true
+  },
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "no-param-reassign": 0,
+    "import/prefer-default-export": 0
+  }
+}
