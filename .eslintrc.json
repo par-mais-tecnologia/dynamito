@@ -19,6 +19,8 @@
     "no-restricted-syntax": 0,
     "no-prototype-builtins": 0,
     "no-plusplus": 0,
-    "no-continue": 0
+    "no-continue": 0,
+    "func-names": 0,
+    "global-require": 0
   }
 }
