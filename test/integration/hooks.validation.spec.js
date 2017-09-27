@@ -20,7 +20,7 @@ function genSample() {
 
 describe('Dynamito Hooks: #validation: ', () => {
   before(() => {
-    ValidationModel = Dynamito.model('Person', ValidationSchema);
+    ValidationModel = Dynamito.model('Validation', ValidationSchema);
     return ValidationModel.scan().removeAll();
   });
   beforeEach(() => {

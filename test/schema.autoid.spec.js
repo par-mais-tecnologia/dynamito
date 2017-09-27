@@ -59,7 +59,6 @@ describe('Dynamito Auto Ids: ', () => {
       sandbox.stub(Utils, 'generateId', generator.generate(5));
     });
     beforeEach(() => {
-      console.log(generator);
       generator.reset();
     });
     after(() => {

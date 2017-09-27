@@ -268,6 +268,20 @@ On this case, when `person.full` is accessed, `Jon Snow`will be returned.
 
 TODO
 
+## Developing
+
+1. To run a local Dynamo server, install local DynamoDB and run following command.
+ 
+```
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+```
+
+2. Comment DynamitoMemory configuration and run your testes.
+
+With this, your tests will run using a real DynamoDB simulation.
+
+To access DynamoDB shell use: `http://localhost:8000/shell/`
+
 ## Contributing
 The [Par Mais Tecnologia][ParMaisTech] encourages participation. If you feel you can help in any way, be
 it with bug reporting, documentation, examples, extra testing, or new features feel free
