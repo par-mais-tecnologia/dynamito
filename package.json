@@ -14,7 +14,19 @@
     "dist"
   ],
   "main": "dist/index.js",
-  "license": "MIT",
+  "license": "(Apache-2.0)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/par-mais-tecnologia/dynamito.git"
+  },
+  "keywords": [
+    "dynamoDB",
+    "nosql",
+    "no-sql",
+    "aws",
+    "database"
+  ],
+  "homepage": "https://github.com/par-mais-tecnologia/dynamito#readme",
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-eslint": "^7.1.1",
