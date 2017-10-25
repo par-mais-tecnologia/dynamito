@@ -1,6 +1,6 @@
 {
   "name": "dynamito",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Connect into your DynamoDb with epic weapons.",
   "directories": {
     "test": "test"
