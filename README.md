@@ -158,7 +158,7 @@ On this case, `name` will, by default, if left empty, be `Jon Snow`.
 
 #### Specifying attributes on Queries
 
-To remove fields from queries, you can use `fields()` operation from a Finder, just like:
+To remove fields from queries, you can use `fields()` operation from a Finder, with a minus sign, just like:
 
 ```
 User
@@ -168,6 +168,15 @@ User
 ```
 
 On this case, password field will be removed from response on all queries.
+
+To select only specific fields on a query or scan, you can use `fields()` operation from a Finder, with a plus sign, just like:
+
+```
+User
+    .scan()
+    .fields(['+name', '+id'])
+    .exec()
+```
 
 ### Query for data
 
