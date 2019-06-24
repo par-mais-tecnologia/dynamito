@@ -14,7 +14,7 @@ Dynamito.configure({
 
   production: false,
   listtables: false,
-  // Auto create tables, when production is not configured.
+  // Auto create tables when production is not configured.
   creating: true,
   verbose: false,
 
